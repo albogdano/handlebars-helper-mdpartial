@@ -16,12 +16,12 @@ override: {testvar: "[44444]"}
       list of partials matching "**/*.md"
     </h3>{{#eachPartial "**/*.md"}} {{partialName}} {{partialSrc}}
     <hr>
-    {{#mdpartial partialName}} {{contentHtml}} - {{this.testvar}} {{/mdpartial}}
+    {{#mdpartial partialName}} {{this.content}} - {{this.testvar}} {{/mdpartial}}
     <hr>
     {{/eachPartial}}
     <h3>
       single partial with given context
-    </h3>{{#mdpartial "md3" override}} {{contentHtml}} - {{this.testvar}} {{/mdpartial}}
+    </h3>{{#mdpartial "md3" override}} {{this.content}} - {{this.testvar}} {{/mdpartial}}
     <h3>
       this is a secret
     </h3>{{>secret}}

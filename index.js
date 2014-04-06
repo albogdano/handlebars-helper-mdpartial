@@ -102,11 +102,11 @@ module.exports.register = function(Handlebars, opts, params) {
 		context = grunt.config.process(context);
 
 		var compiledTemplate = Handlebars.compile(pageObj.content || "");
-		var output = compiledTemplate(context).replace(/^\s+/, "");
-
+		var output = compiledTemplate(context).replace(/^\s+/, "");    
+    var content = (path.extname(filepath) === ".md") ? marked(output) : output;
+    
 		context = _.extend(context, {
-			contentHtml: new Handlebars.SafeString(marked(output)),
-			contentRaw: output
+			content: new Handlebars.SafeString(content)
 		});
 
 		return options.fn(context);

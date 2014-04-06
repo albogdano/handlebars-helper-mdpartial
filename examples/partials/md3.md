@@ -1,6 +1,4 @@
 ---
-layout: default.hbs
-
 title: Markdown Helpers
 description: Examples of how to compile markdown files to HTML using Handlebars helpers.
 testvar: 33333
