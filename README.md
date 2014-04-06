@@ -10,7 +10,7 @@ Use [npm](npmjs.org) to install the package in your project's directory:
 
 ```
 $ cd your-project
-$ npm i handlebars-helper-partial
+$ npm install handlebars-helper-mdpartial --save-dev
 ```
 
 ### Register the helper
