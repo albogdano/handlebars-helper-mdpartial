@@ -20,10 +20,10 @@ The easiest way to register the helper with [Assemble](https://github.com/assemb
 ```
 {
   "devDependencies": {
-    "handlebars-helper-partial": "*"
+    "handlebars-helper-mdpartial": "*"
   },
   "keywords": [
-    "handlebars-helper-partial"
+    "handlebars-helper-mdpartial"
   ]
 }
 ```
@@ -34,9 +34,9 @@ Alternatively, to register the helper explicitly in the Gruntfile:
 grunt.initConfig({
   assemble: {
     options: {
-      // the "handlebars-helper-partial" npm module must also be listed in
+      // the "handlebars-helper-mdpartial" npm module must also be listed in
       // devDependencies for assemble to automatically resolve the helper
-      helpers: ["handlebars-helper-partial", "foo/*.js"]
+      helpers: ["handlebars-helper-mdpartial", "foo/*.js"]
     },
     files: {
       "dist/": ["src/templates/*.html"]
