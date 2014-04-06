@@ -1,0 +1,46 @@
+{
+  "name": "handlebars-helper-mdpartial",
+  "description": "Helpers for Assemble and Handlebars. {{mdpartial}} renders Markdown partials and collects YAML data and {{eachPartial}} iterates over partials.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/albogdano/handlebars-helper-mdpartial",
+  "author": {
+    "name": "Alex Bogdanovski",
+    "url": "https://github.com/albogdano"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albogdano/handlebars-helper-mdpartial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albogdano/handlebars-helper-mdpartial/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/albogdano/handlebars-helper-mdpartial/blob/master/LICENSE"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "assemble": ">=0.4.37",
+    "grunt": ">=0.4.4",
+    "grunt-contrib-clean": ">=0.5.0",
+    "grunt-contrib-copy": ">=0.5.0",
+    "grunt-contrib-jshint": ">=0.8.0",
+    "lodash": "^2.4.1",
+    "gray-matter": "^0.3.4",
+    "marked": "^0.3.2",
+    "minimatch": "^0.2.14"
+  },
+  "keywords": [
+    "assemble",
+    "partial",
+    "helper",
+    "assemble helper",
+    "markdown",
+    "handlebars helper",
+    "yaml",
+    "md",
+    "partials"
+  ]
+}

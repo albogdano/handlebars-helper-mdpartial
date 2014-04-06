@@ -1,0 +1,10 @@
+{
+	"dest": "dist",
+	"templates": "examples",
+	"plugins": "<%= site.templates %>/plugins",
+	"helpers": "<%= site.templates %>/helpers",
+	"partials": "<%= site.templates %>/partials",
+	"layouts": "<%= site.templates %>/layouts",
+	"layout": "default.html",
+	"data": "<%= site.templates %>/data/*.{json,yml}"
+}

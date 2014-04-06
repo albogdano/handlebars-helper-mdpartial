@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example</title>
+  </head>
+  <body>
+    <div class="container bs-docs-container">
+      
+
+<!-- Header -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1>Testing!</h1>
+  </div>
+  
+  <div>
+    <h3>list of partials matching "**/*.md"</h3>
+    
+      md1 examples/partials/md1.md
+      <hr>
+			
+        <h2 id="hello-markdown-1">Hello Markdown 1</h2>
+<ul>
+<li><strong>this comes from above</strong>: hi from index.html!</li>
+<li><strong>this is local</strong>: 12345</li>
+<li><strong>this is lodash</strong>: dist</li>
+</ul>
+ => 12345
+      
+      <hr>
+		
+      md2 examples/partials/md2.md
+      <hr>
+			
+        <h2 id="hello-again-markdown">Hello again, Markdown</h2>
+<ul>
+<li><strong>this comes from above</strong>: hi from index.html!</li>
+<li><strong>this is local</strong>: 67890</li>
+</ul>
+ => 67890
+      
+      <hr>
+		
+      md3 examples/partials/md3.md
+      <hr>
+			
+        <h2 id="markdown-3">Markdown 3</h2>
+<ul>
+<li><strong>this comes from above</strong>: hi from index.html!</li>
+<li><strong>this is local</strong>: 33333</li>
+</ul>
+<p><strong>override me</strong>: 33333 </p>
+ => 33333
+      
+      <hr>
+		
+    
+    <h3>single partial with given context</h3>
+		
+      <h2 id="markdown-3">Markdown 3</h2>
+<ul>
+<li><strong>this comes from above</strong>: hi from index.html!</li>
+<li><strong>this is local</strong>: [44444]</li>
+</ul>
+<p><strong>override me</strong>: [44444] </p>
+ => [44444]
+    
+    
+    <h3>this is a secret</h3>
+		
+<div>
+======
+
+  <h2 id="top-secret-">Top Secret!</h2>
+<p><strong>this is rendered from inside another partial</strong></p>
+ 
+
+======
+<div>
+    
+  </div>
+  
+  <p class="lead"></p>
+</div>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+  <div class="container">
+    <p>Made with <a href="https://github.com/assemble/assemble" target="_blank">Assemble</a>, the static site generator for Node.js, Grunt.js and Yeoman.</p>
+    <hr>
+</footer>
+
+  </body>
+</html>
