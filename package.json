@@ -20,7 +20,7 @@
       "url": "https://github.com/albogdano/handlebars-helper-mdpartial/blob/master/LICENSE"
     }
   ],
-  "main": "Gruntfile.js",
+  "main": "./index.js",
   "devDependencies": {
     "assemble": ">=0.4.37",
     "grunt": ">=0.4.4",
