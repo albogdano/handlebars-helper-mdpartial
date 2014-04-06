@@ -15,7 +15,7 @@ logs
 results
 build
 npm-debug.log
-TODO.md
+TODOs.md
 
 node_modules
 _gh_pages
