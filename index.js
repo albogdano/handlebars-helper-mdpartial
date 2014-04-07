@@ -84,7 +84,7 @@ module.exports.register = function(Handlebars, opts, params) {
 		var filepath = _.first(_.filter(assemble.partials, function(fp) {
 			return path.basename(fp, path.extname(fp)) === name;
 		}));
-
+    
 		// not found - find by path
 		if (!filepath || filepath.length <= 0) {
 			filepath = name;
@@ -106,7 +106,9 @@ module.exports.register = function(Handlebars, opts, params) {
     var content = (path.extname(filepath) === ".md") ? marked(output) : output;
     
 		context = _.extend(context, {
-			content: new Handlebars.SafeString(content)
+			content: new Handlebars.SafeString(content),
+			partialSrc: filepath,
+			partialName: path.basename(filepath, path.extname(filepath))
 		});
 
 		return options.fn(context);
