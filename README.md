@@ -1,6 +1,7 @@
 # handlebars-helper-mdpartial [![NPM version](https://badge.fury.io/js/handlebars-helper-mdpartial.png)](http://badge.fury.io/js/handlebars-helper-mdpartial) 
 
-> Helpers for [Assemble](https://github.com/assemble/assemble) and [Handlebars](http://github.com/wycats/handlebars.js).
+> Helpers for [Assemble](https://github.com/assemble/assemble) and [Handlebars](http://github.com/wycats/handlebars.js) 
+> that make working with Markdown partials easier and more flexible.
 > `{{mdpartial}}` is a block helper which renders a Markdown partial and passes data to it, and
 > `{{eachPartial}}` iterates over a set of partials.
 
@@ -80,7 +81,7 @@ Optionally pass in a context object as the second parameter:
 
 ## `{{eachPartial}}`
 
-Iterates over registered partials and passes their data to the context object.
+Iterates over a set of partials and adds their data to the context object.
 The set of partials can be filtered using blobbing patterns. 
 It can be used inside other partials. 
 
@@ -96,8 +97,22 @@ The context is:
 ```
 {{#eachPartial "**/*.md"}}
   ...
-  {{{{partialSrc}} {{partialName}}
+  {{partialSrc}} {{partialName}}
   ...  
+{{/eachPartial}}
+```
+
+## Combined example
+
+```
+{{#eachPartial "**/*.md"}}
+  {{#mdpartial this}}
+    
+    {{this.content}}
+        
+    {{partialSrc}} {{partialName}}
+    
+  {{/mdpartial}}
 {{/eachPartial}}
 ```
 
