@@ -57,25 +57,25 @@ Inside the block you can use `{{this.content}}` to get the content of the partia
 4. **Assemble options**  : Custom properties defined in Assemble options
 5. **grunt.config.data** : Data from `grunt.config.data` (e.g. `pkg: grunt.file.readJSON("package.json"`))
 
-**Note:** this helper can be used for all partials, not just those ending in `*.md`.
+**Note:** this helper can be used for all partials, not just those ending in `*.md`. If the partial ends with `*.md` then `{{this.content}}` will return the content rendered as HTML.
 
 ### Examples
 
 ```
 {{#mdpartial "foo"}}
-  {{this.bar}}
+  {{this.bar}} {{this.content}}
 {{/mdpartial}}
 ```
 ```
 {{#mdpartial "path/to/foo.md"}}
-  {{this.bar}}
+  {{this.bar}} {{this.content}}
 {{/mdpartial}}
 ```
 Optionally pass in a context object as the second parameter:
 
 ```
 {{#mdpartial "foo" contextObject}}
-  {{this.bar}}
+  {{this.bar}} {{this.content}}
 {{/mdpartial}}
 ```
 
