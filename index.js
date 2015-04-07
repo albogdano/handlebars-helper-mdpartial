@@ -103,7 +103,7 @@ module.exports.register = function(Handlebars, opts, params) {
 
 		var compiledTemplate = Handlebars.compile(pageObj.content || "");
 		var output = compiledTemplate(context).replace(/^\s+/, "");    
-    var content = (path.extname(filepath) === ".md") ? marked(output) : output;
+    	var content = (path.extname(filepath) === ".md") ? marked(output) : output;
     
 		context = _.extend(context, {
 			content: new Handlebars.SafeString(content),
