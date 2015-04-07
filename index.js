@@ -94,9 +94,10 @@ module.exports.register = function(Handlebars, opts, params) {
 		// grunt config and Assemble options.data
 		var pageObj = matter.read(filepath) || {};
 		var pageCtx = pageObj.context || {};
-
+		var pageData = pageObj.data || {};
+		
 		// Remove page content from `this` and `opts` before creating new context
-		context = _.extend({}, grunt.config.data, omit(opts), omit(this), pageCtx, context);
+		context = _.extend({}, pageData, pageCtx, context);
 
 		// process any templates inside context property values
 		context = grunt.config.process(context);
