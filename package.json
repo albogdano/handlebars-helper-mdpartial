@@ -1,7 +1,7 @@
 {
   "name": "handlebars-helper-mdpartial",
   "description": "Helpers for Assemble and Handlebars. {{mdpartial}} renders Markdown partials and collects YAML data and {{eachPartial}} iterates over partials.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "homepage": "https://github.com/albogdano/handlebars-helper-mdpartial",
   "author": {
     "name": "Alex Bogdanovski",

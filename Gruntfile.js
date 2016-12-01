@@ -51,21 +51,13 @@ module.exports = function(grunt) {
     // Before generating new files remove files from previous build.
     clean: {
       dest: ["<%= site.dest %>/**"]
-    },
-    // Lint JavaScript
-    jshint: {
-      all: ["*.js"],
-      options: {
-        jshintrc: ".jshintrc"
-      }
     }
   });
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-copy");
-  grunt.loadNpmTasks("grunt-contrib-jshint");
-  grunt.loadNpmTasks("assemble");
+  grunt.loadNpmTasks("grunt-assemble");
 
-  grunt.registerTask("default", ["clean", "jshint", "copy:content", "assemble"]);
+  grunt.registerTask("default", ["clean", "copy:content", "assemble"]);
 };
