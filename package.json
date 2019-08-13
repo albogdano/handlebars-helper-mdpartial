@@ -17,6 +17,7 @@
   "license": "MIT",
   "main": "./index.js",
   "devDependencies": {
+    "braces": "^3.0.2",
     "gray-matter": "4.0.2",
     "grunt": "1.0.4",
     "grunt-assemble": "0.6.3",
